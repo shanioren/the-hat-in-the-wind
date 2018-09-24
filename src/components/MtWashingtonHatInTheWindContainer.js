@@ -7,8 +7,8 @@ import MtWashingtonConfiguration from '../MtWashingtonConfiguration'
 import { WindSpeedUnits } from '../services/windModel'
 
 
-const startTime = moment.tz('2018-03-19 06:00', MtWashingtonConfiguration.timezoneCode)
-const endTime = moment.tz('2018-03-19 22:00', MtWashingtonConfiguration.timezoneCode)
+const startTime = moment.tz('2018-03-19 00:00', MtWashingtonConfiguration.timezoneCode)
+const endTime = moment.tz('2018-03-19 24:00', MtWashingtonConfiguration.timezoneCode)
 
 class MtWashingtonHatInTheWindContainer extends Component {
   constructor() {

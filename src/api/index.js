@@ -18,7 +18,7 @@ class WindSpeedApi {
     if (IS_DEVELOPMENT)
       return Promise.resolve(ajaxMockResult)
 
-    const requestParams = {
+    let requestParams = {
       method: 'POST',
       body: JSON.stringify({
         'geocode': {
