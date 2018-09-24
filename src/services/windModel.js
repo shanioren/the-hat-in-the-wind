@@ -1,6 +1,6 @@
 const WindModel = class  {
   constructor(windSpeed, observationTime) {
-    this.windSpeed = windSpeed,
+    this.windSpeed = windSpeed
     this.observationTime = observationTime
   }
 }
