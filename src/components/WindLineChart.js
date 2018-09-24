@@ -7,8 +7,6 @@ import { ThemeType, WindDataType } from '../types'
 import WindSpeedService from '../services'
 
 
-
-
 const WindLineChart = ({className, data, theme}) => {
   let formattedWindData = map(data, function (item) {
     return {
