@@ -20,14 +20,12 @@ const WindLineChart = ({className, data, theme}) => {
   return(
   <LineChart className={className} width={600} height={300} data={formattedWindData}>
     <XAxis dataKey="time"/>
-    <YAxis>
-      <Label value={`Wind Speed (${units})`} angle={-90} />
-    </YAxis>
+    <YAxis/>
     <CartesianGrid strokeDasharray="3 3"/>
     <Tooltip/>
     <Legend/>
-     <ReferenceLine y={windBlowsHatSpeed} label="Hat blows" stroke={theme.colors.secondary}/>
-    <Line type="monotone" dataKey="wind" stroke={theme.colors.primary}/>
+    <ReferenceLine y={windBlowsHatSpeed} label="Hat blows" stroke={theme.colors.secondary}/>
+    <Line type="monotone" dataKey="wind" stroke={theme.colors.primary} name={`Wind Speed (${units})`}/>
   </LineChart>
 )}
 
