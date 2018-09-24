@@ -6,15 +6,8 @@ const ApiResponse = class  {
     this.observationTime = observationTime
   }
 
-  toJson = () => ({
-    lat: this.lat,
-    lon: this.lon,
-    wind_speed: {value: this.windSpeed, units: 'knots'},
-    observation_time: {value: this.observationTime}
-  })
-
   static fromJson = (json) =>
-    new ApiResponse(json.lat, json.lon, json.wind_speed.value, json.observation_time.value)
+    new ApiResponse(json.lat, json.lon, json.wind_speed, json.observation_time.value)
 
 }
 

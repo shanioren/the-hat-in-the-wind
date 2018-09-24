@@ -17,11 +17,13 @@ const WindLineChart = ({className, data, theme}) => {
     }
   })
 
+  let units = data[0].windSpeed.units
+
   return(
   <LineChart className={className} width={600} height={300} data={formattedWindData}>
     <XAxis dataKey="time"/>
     <YAxis>
-      <Label value="Wind Speed (knots)" angle={-90} />
+      <Label value={`Wind Speed (${units})`} angle={-90} />
     </YAxis>
     <CartesianGrid strokeDasharray="3 3"/>
     <Tooltip/>

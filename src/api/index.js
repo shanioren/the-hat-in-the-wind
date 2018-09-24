@@ -9,12 +9,12 @@ const CLIMACELL_API_KEY = process.env.REACT_APP_CLIMACELL_API_KEY
 
 
 class WindSpeedApi {
-  static get(geocode, startTime, endTime, timePeriod) {
-    return this._fetchApi(geocode, startTime, endTime, timePeriod)
+  static get(geocode, startTime, endTime, timePeriod, units) {
+    return this._fetchApi(geocode, startTime, endTime, timePeriod, units)
       .then(jsonArray => map(jsonArray, json => ApiResponse.fromJson(json)))
   }
 
-  static _fetchApi(geocode, startTime, endTime, timePeriod) {
+  static _fetchApi(geocode, startTime, endTime, timePeriod, units) {
     if (IS_DEVELOPMENT)
       return Promise.resolve(ajaxMockResult)
 
@@ -31,7 +31,7 @@ class WindSpeedApi {
         'fields': [
           {
             'name': 'wind_speed',
-            'units': 'knots'
+            'units': units
           }
         ]
       }),

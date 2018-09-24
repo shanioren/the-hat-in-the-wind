@@ -4,6 +4,7 @@ import moment from 'moment-timezone';
 import WindSpeedService from '../services'
 import HatInTheWind from './HatInTheWind'
 import MtWashingtonConfiguration from '../MtWashingtonConfiguration'
+import { WindSpeedUnits } from '../services/windModel'
 
 
 const startTime = moment.tz('2018-03-19 06:00', MtWashingtonConfiguration.timezoneCode)
@@ -20,7 +21,7 @@ class MtWashingtonHatInTheWindContainer extends Component {
   }
 
   componentDidMount() {
-    WindSpeedService.get(MtWashingtonConfiguration.geocode, startTime, endTime, 30)
+    WindSpeedService.get(MtWashingtonConfiguration.geocode, startTime, endTime, 30, WindSpeedUnits.KNOTS)
       .then(windData => this.setState({
         isLoading: false,
         windData: windData
