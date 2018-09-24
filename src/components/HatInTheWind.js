@@ -17,7 +17,7 @@ const HeaderContainer = styled.div`
 const HatInTheWind = ({title, windData , isLoading}) => (
   <div>
     <HeaderContainer>
-      <h1>Hat In Wind Wind</h1>
+      <h1>Hat In The Wind</h1>
       { title && (
         <h2>{title}</h2>
       )}
