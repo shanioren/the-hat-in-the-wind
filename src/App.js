@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <ThemeProvider theme={Theme}>
-        <div className="App">
+        <div>
           <MtWashingtonHatInTheWindContainer />
         </div>
       </ThemeProvider>
