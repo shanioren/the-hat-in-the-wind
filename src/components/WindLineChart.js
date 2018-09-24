@@ -1,7 +1,7 @@
 import React from 'react'
 import map from 'lodash/map'
 import { withTheme } from 'styled-components'
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Label, ReferenceLine } from 'recharts'
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ReferenceLine } from 'recharts'
 
 import { ThemeType, WindDataType } from '../types'
 import WindSpeedService from '../services'
